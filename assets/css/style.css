@@ -238,16 +238,11 @@ body {
   .contact .right form .fields {
     display: block; }
 
-  body .meInfo .meDetail {
-    transform: rotate(0); }
-
-  body .meInfo .meSkills {
-    transform: rotate(0); }
-
-  body .meInfo .meSkills {
-    display: none; }
-
-  body .meInfo .meDetail {
-    position: relative; } }
+  .home .container .meInfo .meDetail {
+    transform: rotate(0);
+    position: relative; }
+  .home .container .meInfo .meSkills {
+    transform: rotate(0);
+    display: none; } }
 
 /*# sourceMappingURL=style.css.map */
