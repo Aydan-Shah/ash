@@ -3,13 +3,18 @@
   padding: 0;
   box-sizing: border-box; }
 
+h2 {
+  font-family: 'Sacramento', cursive; }
+
+/* ***** Body ***** */
 body {
   height: 100vh;
   background: #1a1e23;
   position: relative;
   color: white; }
 
-body .home {
+/* ***** Home ***** */
+.home {
   display: flex;
   justify-content: center;
   position: absolute;
@@ -17,52 +22,38 @@ body .home {
   left: 0;
   right: 0;
   margin: auto; }
+  .home .container {
+    position: relative; }
+    .home .container .meInfo {
+      position: relative; }
+      .home .container .meInfo .meImg img {
+        border: 10px solid #39bb66;
+        max-width: 100%; }
+      .home .container .meInfo .meName span {
+        font-family: 'Sacramento', cursive;
+        font-size: 50px;
+        color: white;
+        font-weight: bolder;
+        display: flex;
+        justify-content: center; }
+      .home .container .meInfo .meDetail {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: rotate(-15deg); }
+        .home .container .meInfo .meDetail li {
+          transition: all cubic-bezier(0.075, 0.82, 0.165, 1);
+          height: 60px;
+          align-items: center !important; }
+          .home .container .meInfo .meDetail li :hover {
+            padding: 10px; }
+      .home .container .meInfo .meSkills {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: rotate(15deg); }
 
-body .container {
-  position: relative; }
-
-body .meInfo {
-  position: relative; }
-
-body .meInfo .meImg img {
-  border: 10px solid #39bb66;
-  max-width: 100%; }
-
-.meName span {
-  font-family: 'Sacramento', cursive;
-  font-size: 50px;
-  color: white;
-  font-weight: bolder;
-  display: flex;
-  justify-content: center; }
-
-body .meInfo .meDetail {
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: rotate(-15deg); }
-
-body .meInfo .meSkills {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: rotate(15deg); }
-
-body .meInfo .meDetail li {
-  transition: all cubic-bezier(0.075, 0.82, 0.165, 1);
-  height: 60px;
-  align-items: center !important; }
-
-body .meInfo .meDetail li:hover {
-  padding: 10px; }
-
-.me {
-  display: flex;
-  justify-content: center; }
-
-h2 {
-  font-family: 'Sacramento', cursive; }
-
+/* ***** About me ***** */
 .aboutMe {
   display: flex;
   justify-content: space-between;
@@ -85,6 +76,7 @@ h2 {
       font-weight: 800;
       font-size: 1.2rem; }
 
+/* ***** MySkills ***** */
 .mySkills {
   display: flex;
   justify-content: space-between;
@@ -94,8 +86,9 @@ h2 {
     margin-bottom: 20px; }
   .mySkills .card:hover {
     transform: scale(1.1);
-    box-shadow: -6px 6px 10px 0px green; }
+    box-shadow: -6px 6px 10px 0px #39bb66; }
 
+/* ***** Resume ***** */
 .resume {
   display: flex;
   gap: 100px;
@@ -107,629 +100,100 @@ h2 {
     border-bottom: 2px solid #39bb66;
     margin-bottom: 25px; }
   .resume .row li a {
-    color: rgba(57, 187, 102, 0.5); }
+    color: #39bb66; }
 
+/* ***** Services ***** */
 .services .serv-content {
   display: flex;
   justify-content: space-around; }
+  .services .serv-content .card {
+    width: calc(33% - 20px);
+    background: #171819;
+    text-align: center;
+    border-radius: 6px;
+    padding: 50px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease; }
+    .services .serv-content .card .box {
+      transition: all 0.3s ease; }
+  .services .serv-content :hover {
+    background: #39bb66; }
+    .services .serv-content :hover .box {
+      transform: scale(1.2); }
+    .services .serv-content :hover i {
+      color: white; }
+  .services .serv-content i {
+    font-size: 50px;
+    color: #39bb66;
+    transition: color 0.3s ease; }
+  .services .serv-content .text {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0; }
 
-.services .serv-content .card {
-  width: calc(33% - 20px);
-  background: #222;
-  text-align: center;
-  border-radius: 6px;
-  padding: 50px 25px;
-  cursor: pointer;
-  transition: all 0.3s ease; }
-
-.services .serv-content .card:hover {
-  background: #39bb66; }
-
-.services .serv-content .card .box {
-  transition: all 0.3s ease; }
-
-.services .serv-content .card:hover .box {
-  transform: scale(1.05); }
-
-.services .serv-content .card i {
-  font-size: 50px;
-  color: #39bb66;
-  transition: color 0.3s ease; }
-
-.services .serv-content .card:hover i {
-  color: #fff; }
-
-.services .serv-content .card .text {
-  font-size: 25px;
-  font-weight: 500;
-  margin: 10px 0 7px 0; }
-
+/* ***** Portfolio ***** */
 .portfilio {
   margin-top: 60px; }
   .portfilio .portfolioDetail {
     display: flex;
     justify-content: space-around; }
 
-.contact {
-  margin-top: 60px; }
-
-.contact .contact-content {
-  display: flex;
-  gap: 50px;
-  padding: 20px; }
-
-.contact .contact-content .column {
-  width: calc(50% - 30px); }
-
-.contact .contact-content .text {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 10px; }
-
-.contact .contact-content .left p {
-  text-align: justify; }
-
-.contact .contact-content .left .icons {
-  margin: 10px 0; }
-
-.contact .contact-content .row {
-  display: flex;
-  height: 65px;
-  align-items: center; }
-
-.contact .contact-content .row .info {
-  margin-left: 30px; }
-
-.contact .contact-content .row i {
-  font-size: 25px;
-  color: #39bb66; }
-
-.contact .contact-content .info .head {
-  font-weight: 500; }
-
-.contact .contact-content .info .sub-title {
-  color: #333; }
-
-.contact .right form .fields {
-  display: flex; }
-
-.contact .right form .field,
-.contact .right form .fields .field {
-  height: 45px;
-  width: 100%;
-  margin-bottom: 15px; }
-
-.contact .right form .textarea {
-  height: 80px;
-  width: 100%; }
-
-.contact .right form .name {
-  margin-right: 10px; }
-
-.contact .right form .field input,
-.contact .right form .textarea textarea {
-  height: 100%;
-  width: 100%;
-  border: 1px solid lightgrey;
-  border-radius: 6px;
-  outline: none;
-  padding: 0 15px;
-  font-size: 17px;
-  font-family: 'Poppins', sans-serif;
-  transition: all 0.3s ease; }
-
-.contact .right form .field input:focus,
-.contact .right form .textarea textarea:focus {
-  border-color: #b3b3b3; }
-
-.contact .right form .textarea textarea {
-  padding-top: 10px;
-  resize: none; }
-
-.contact .right form .button-area {
-  display: flex;
-  align-items: center; }
-
-.right form .button-area button {
-  color: #fff;
-  display: block;
-  width: 160px !important;
-  height: 45px;
-  outline: none;
-  font-size: 18px;
-  font-weight: 500;
-  border-radius: 6px;
-  cursor: pointer;
-  flex-wrap: nowrap;
-  background: #39bb66;
-  border: 2px solid #39bb66;
-  transition: all 0.3s ease; }
-
-.right form .button-area button:hover {
-  color: #39bb66;
-  background: none; }
-
+/* ***** Contact ***** */
 .contact {
   border: 1px solid #111;
-  color: white; }
+  color: white;
+  margin-top: 60px; }
+  .contact h2 {
+    padding: 20px 0 0 20px; }
+  .contact .contact-content {
+    display: flex;
+    gap: 50px;
+    padding: 20px; }
+    .contact .contact-content .column {
+      width: calc(50% - 30px); }
+    .contact .contact-content .text {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 10px; }
+    .contact .contact-content .left p {
+      text-align: justify; }
+    .contact .contact-content .left .icons {
+      margin: 10px 0; }
+    .contact .contact-content .row {
+      display: flex;
+      height: 65px;
+      align-items: center; }
+      .contact .contact-content .row .info {
+        margin-left: 30px; }
+        .contact .contact-content .row .info .head {
+          font-weight: 500; }
+        .contact .contact-content .row .info .sub-title {
+          color: #bda8a8; }
+      .contact .contact-content .row i {
+        font-size: 25px;
+        color: #39bb66; }
+    .contact .contact-content .right ul {
+      display: flex;
+      gap: 20px;
+      padding: 0; }
+    .contact .contact-content .right li {
+      list-style: none; }
+    .contact .contact-content .right i {
+      color: #39bb66; }
 
-.contact .contact-content .info .sub-title {
-  color: #bda8a8; }
-
-.contact h2 {
-  padding: 20px 0 0 20px; }
-
-.right ul {
-  display: flex;
-  list-style: none;
-  gap: 20px;
-  padding: 0; }
-
-.right li a i {
-  color: #39bb66;
-  font-size: 25px; }
-
-/* .finish section styling */
+/* ***** Finish *****  */
 .finish {
-  background: #111;
+  background: #1a1e23;
   padding: 15px 23px;
-  color: #fff;
+  color: white;
   text-align: center; }
+  .finish span a {
+    color: #39bb66;
+    text-decoration: none; }
+  .finish span a:hover {
+    text-decoration: underline; }
 
-.finish span a {
-  color: #39bb66;
-  text-decoration: none; }
-
-.finish span a:hover {
-  text-decoration: underline; }
-
-.bubbles {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden; }
-
-.bubble {
-  position: absolute;
-  left: var(--bubble-left-offset);
-  bottom: -75%;
-  display: block;
-  width: var(--bubble-radius);
-  height: var(--bubble-radius);
-  border-radius: 50%;
-  animation: float-up var(--bubble-float-duration) var(--bubble-float-delay) ease-in infinite; }
-  .bubble::before {
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(57, 187, 102, 0.5);
-    border-radius: inherit;
-    animation: var(--bubble-sway-type) var(--bubble-sway-duration) var(--bubble-sway-delay) ease-in-out alternate infinite; }
-  .bubble:nth-child(0) {
-    --bubble-left-offset: 66vw;
-    --bubble-radius: 1vw;
-    --bubble-float-duration: 12s;
-    --bubble-sway-duration: 4s;
-    --bubble-float-delay: 3s;
-    --bubble-sway-delay: 1s;
-    --bubble-sway-type: sway-right-to-left; }
-  .bubble:nth-child(1) {
-    --bubble-left-offset: 61vw;
-    --bubble-radius: 4vw;
-    --bubble-float-duration: 8s;
-    --bubble-sway-duration: 5s;
-    --bubble-float-delay: 2s;
-    --bubble-sway-delay: 3s;
-    --bubble-sway-type: sway-right-to-left; }
-  .bubble:nth-child(2) {
-    --bubble-left-offset: 73vw;
-    --bubble-radius: 6vw;
-    --bubble-float-duration: 7s;
-    --bubble-sway-duration: 6s;
-    --bubble-float-delay: 3s;
-    --bubble-sway-delay: 4s;
-    --bubble-sway-type: sway-left-to-right; }
-  .bubble:nth-child(3) {
-    --bubble-left-offset: 86vw;
-    --bubble-radius: 8vw;
-    --bubble-float-duration: 7s;
-    --bubble-sway-duration: 5s;
-    --bubble-float-delay: 4s;
-    --bubble-sway-delay: 3s;
-    --bubble-sway-type: sway-left-to-right; }
-  .bubble:nth-child(4) {
-    --bubble-left-offset: 53vw;
-    --bubble-radius: 9vw;
-    --bubble-float-duration: 9s;
-    --bubble-sway-duration: 4s;
-    --bubble-float-delay: 1s;
-    --bubble-sway-delay: 1s;
-    --bubble-sway-type: sway-left-to-right; }
-  .bubble:nth-child(5) {
-    --bubble-left-offset: 85vw;
-    --bubble-radius: 10vw;
-    --bubble-float-duration: 12s;
-    --bubble-sway-duration: 4s;
-    --bubble-float-delay: 3s;
-    --bubble-sway-delay: 2s;
-    --bubble-sway-type: sway-left-to-right; }
-  .bubble:nth-child(6) {
-    --bubble-left-offset: 52vw;
-    --bubble-radius: 5vw;
-    --bubble-float-duration: 10s;
-    --bubble-sway-duration: 4s;
-    --bubble-float-delay: 2s;
-    --bubble-sway-delay: 4s;
-    --bubble-sway-type: sway-left-to-right; }
-  .bubble:nth-child(7) {
-    --bubble-left-offset: 23vw;
-    --bubble-radius: 9vw;
-    --bubble-float-duration: 6s;
-    --bubble-sway-duration: 5s;
-    --bubble-float-delay: 0s;
-    --bubble-sway-delay: 4s;
-    --bubble-sway-type: sway-right-to-left; }
-  .bubble:nth-child(8) {
-    --bubble-left-offset: 71vw;
-    --bubble-radius: 5vw;
-    --bubble-float-duration: 12s;
-    --bubble-sway-duration: 6s;
-    --bubble-float-delay: 1s;
-    --bubble-sway-delay: 1s;
-    --bubble-sway-type: sway-left-to-right; }
-  .bubble:nth-child(9) {
-    --bubble-left-offset: 55vw;
-    --bubble-radius: 4vw;
-    --bubble-float-duration: 9s;
-    --bubble-sway-duration: 5s;
-    --bubble-float-delay: 1s;
-    --bubble-sway-delay: 3s;
-    --bubble-sway-type: sway-left-to-right; }
-  .bubble:nth-child(10) {
-    --bubble-left-offset: 1vw;
-    --bubble-radius: 1vw;
-    --bubble-float-duration: 11s;
-    --bubble-sway-duration: 5s;
-    --bubble-float-delay: 3s;
-    --bubble-sway-delay: 0s;
-    --bubble-sway-type: sway-left-to-right; }
-  .bubble:nth-child(11) {
-    --bubble-left-offset: 19vw;
-    --bubble-radius: 1vw;
-    --bubble-float-duration: 10s;
-    --bubble-sway-duration: 5s;
-    --bubble-float-delay: 2s;
-    --bubble-sway-delay: 4s;
-    --bubble-sway-type: sway-right-to-left; }
-  .bubble:nth-child(12) {
-    --bubble-left-offset: 76vw;
-    --bubble-radius: 9vw;
-    --bubble-float-duration: 8s;
-    --bubble-sway-duration: 6s;
-    --bubble-float-delay: 1s;
-    --bubble-sway-delay: 1s;
-    --bubble-sway-type: sway-left-to-right; }
-  .bubble:nth-child(13) {
-    --bubble-left-offset: 96vw;
-    --bubble-radius: 1vw;
-    --bubble-float-duration: 11s;
-    --bubble-sway-duration: 6s;
-    --bubble-float-delay: 3s;
-    --bubble-sway-delay: 4s;
-    --bubble-sway-type: sway-left-to-right; }
-  .bubble:nth-child(14) {
-    --bubble-left-offset: 17vw;
-    --bubble-radius: 6vw;
-    --bubble-float-duration: 7s;
-    --bubble-sway-duration: 4s;
-    --bubble-float-delay: 1s;
-    --bubble-sway-delay: 0s;
-    --bubble-sway-type: sway-right-to-left; }
-  .bubble:nth-child(15) {
-    --bubble-left-offset: 97vw;
-    --bubble-radius: 3vw;
-    --bubble-float-duration: 12s;
-    --bubble-sway-duration: 4s;
-    --bubble-float-delay: 3s;
-    --bubble-sway-delay: 3s;
-    --bubble-sway-type: sway-right-to-left; }
-  .bubble:nth-child(16) {
-    --bubble-left-offset: 98vw;
-    --bubble-radius: 3vw;
-    --bubble-float-duration: 10s;
-    --bubble-sway-duration: 5s;
-    --bubble-float-delay: 4s;
-    --bubble-sway-delay: 1s;
-    --bubble-sway-type: sway-left-to-right; }
-  .bubble:nth-child(17) {
-    --bubble-left-offset: 6vw;
-    --bubble-radius: 4vw;
-    --bubble-float-duration: 6s;
-    --bubble-sway-duration: 4s;
-    --bubble-float-delay: 0s;
-    --bubble-sway-delay: 2s;
-    --bubble-sway-type: sway-left-to-right; }
-  .bubble:nth-child(18) {
-    --bubble-left-offset: 81vw;
-    --bubble-radius: 9vw;
-    --bubble-float-duration: 9s;
-    --bubble-sway-duration: 4s;
-    --bubble-float-delay: 1s;
-    --bubble-sway-delay: 2s;
-    --bubble-sway-type: sway-left-to-right; }
-  .bubble:nth-child(19) {
-    --bubble-left-offset: 65vw;
-    --bubble-radius: 5vw;
-    --bubble-float-duration: 7s;
-    --bubble-sway-duration: 5s;
-    --bubble-float-delay: 1s;
-    --bubble-sway-delay: 3s;
-    --bubble-sway-type: sway-left-to-right; }
-  .bubble:nth-child(20) {
-    --bubble-left-offset: 75vw;
-    --bubble-radius: 3vw;
-    --bubble-float-duration: 6s;
-    --bubble-sway-duration: 5s;
-    --bubble-float-delay: 1s;
-    --bubble-sway-delay: 2s;
-    --bubble-sway-type: sway-left-to-right; }
-  .bubble:nth-child(21) {
-    --bubble-left-offset: 62vw;
-    --bubble-radius: 2vw;
-    --bubble-float-duration: 8s;
-    --bubble-sway-duration: 4s;
-    --bubble-float-delay: 1s;
-    --bubble-sway-delay: 4s;
-    --bubble-sway-type: sway-left-to-right; }
-  .bubble:nth-child(22) {
-    --bubble-left-offset: 18vw;
-    --bubble-radius: 9vw;
-    --bubble-float-duration: 11s;
-    --bubble-sway-duration: 5s;
-    --bubble-float-delay: 4s;
-    --bubble-sway-delay: 2s;
-    --bubble-sway-type: sway-left-to-right; }
-  .bubble:nth-child(23) {
-    --bubble-left-offset: 12vw;
-    --bubble-radius: 1vw;
-    --bubble-float-duration: 10s;
-    --bubble-sway-duration: 6s;
-    --bubble-float-delay: 2s;
-    --bubble-sway-delay: 1s;
-    --bubble-sway-type: sway-right-to-left; }
-  .bubble:nth-child(24) {
-    --bubble-left-offset: 65vw;
-    --bubble-radius: 10vw;
-    --bubble-float-duration: 8s;
-    --bubble-sway-duration: 6s;
-    --bubble-float-delay: 3s;
-    --bubble-sway-delay: 0s;
-    --bubble-sway-type: sway-left-to-right; }
-  .bubble:nth-child(25) {
-    --bubble-left-offset: 31vw;
-    --bubble-radius: 2vw;
-    --bubble-float-duration: 8s;
-    --bubble-sway-duration: 4s;
-    --bubble-float-delay: 0s;
-    --bubble-sway-delay: 3s;
-    --bubble-sway-type: sway-right-to-left; }
-  .bubble:nth-child(26) {
-    --bubble-left-offset: 79vw;
-    --bubble-radius: 1vw;
-    --bubble-float-duration: 12s;
-    --bubble-sway-duration: 4s;
-    --bubble-float-delay: 3s;
-    --bubble-sway-delay: 1s;
-    --bubble-sway-type: sway-right-to-left; }
-  .bubble:nth-child(27) {
-    --bubble-left-offset: 55vw;
-    --bubble-radius: 2vw;
-    --bubble-float-duration: 9s;
-    --bubble-sway-duration: 4s;
-    --bubble-float-delay: 4s;
-    --bubble-sway-delay: 0s;
-    --bubble-sway-type: sway-right-to-left; }
-  .bubble:nth-child(28) {
-    --bubble-left-offset: 85vw;
-    --bubble-radius: 9vw;
-    --bubble-float-duration: 10s;
-    --bubble-sway-duration: 6s;
-    --bubble-float-delay: 4s;
-    --bubble-sway-delay: 1s;
-    --bubble-sway-type: sway-left-to-right; }
-  .bubble:nth-child(29) {
-    --bubble-left-offset: 2vw;
-    --bubble-radius: 7vw;
-    --bubble-float-duration: 7s;
-    --bubble-sway-duration: 5s;
-    --bubble-float-delay: 2s;
-    --bubble-sway-delay: 4s;
-    --bubble-sway-type: sway-right-to-left; }
-  .bubble:nth-child(30) {
-    --bubble-left-offset: 38vw;
-    --bubble-radius: 2vw;
-    --bubble-float-duration: 9s;
-    --bubble-sway-duration: 6s;
-    --bubble-float-delay: 4s;
-    --bubble-sway-delay: 4s;
-    --bubble-sway-type: sway-right-to-left; }
-  .bubble:nth-child(31) {
-    --bubble-left-offset: 6vw;
-    --bubble-radius: 4vw;
-    --bubble-float-duration: 9s;
-    --bubble-sway-duration: 6s;
-    --bubble-float-delay: 4s;
-    --bubble-sway-delay: 2s;
-    --bubble-sway-type: sway-right-to-left; }
-  .bubble:nth-child(32) {
-    --bubble-left-offset: 66vw;
-    --bubble-radius: 7vw;
-    --bubble-float-duration: 10s;
-    --bubble-sway-duration: 5s;
-    --bubble-float-delay: 0s;
-    --bubble-sway-delay: 3s;
-    --bubble-sway-type: sway-left-to-right; }
-  .bubble:nth-child(33) {
-    --bubble-left-offset: 23vw;
-    --bubble-radius: 4vw;
-    --bubble-float-duration: 7s;
-    --bubble-sway-duration: 4s;
-    --bubble-float-delay: 0s;
-    --bubble-sway-delay: 0s;
-    --bubble-sway-type: sway-left-to-right; }
-  .bubble:nth-child(34) {
-    --bubble-left-offset: 5vw;
-    --bubble-radius: 10vw;
-    --bubble-float-duration: 7s;
-    --bubble-sway-duration: 5s;
-    --bubble-float-delay: 4s;
-    --bubble-sway-delay: 2s;
-    --bubble-sway-type: sway-right-to-left; }
-  .bubble:nth-child(35) {
-    --bubble-left-offset: 1vw;
-    --bubble-radius: 8vw;
-    --bubble-float-duration: 11s;
-    --bubble-sway-duration: 5s;
-    --bubble-float-delay: 3s;
-    --bubble-sway-delay: 2s;
-    --bubble-sway-type: sway-right-to-left; }
-  .bubble:nth-child(36) {
-    --bubble-left-offset: 78vw;
-    --bubble-radius: 8vw;
-    --bubble-float-duration: 8s;
-    --bubble-sway-duration: 5s;
-    --bubble-float-delay: 2s;
-    --bubble-sway-delay: 4s;
-    --bubble-sway-type: sway-left-to-right; }
-  .bubble:nth-child(37) {
-    --bubble-left-offset: 9vw;
-    --bubble-radius: 1vw;
-    --bubble-float-duration: 7s;
-    --bubble-sway-duration: 5s;
-    --bubble-float-delay: 3s;
-    --bubble-sway-delay: 3s;
-    --bubble-sway-type: sway-left-to-right; }
-  .bubble:nth-child(38) {
-    --bubble-left-offset: 9vw;
-    --bubble-radius: 8vw;
-    --bubble-float-duration: 10s;
-    --bubble-sway-duration: 4s;
-    --bubble-float-delay: 1s;
-    --bubble-sway-delay: 4s;
-    --bubble-sway-type: sway-left-to-right; }
-  .bubble:nth-child(39) {
-    --bubble-left-offset: 40vw;
-    --bubble-radius: 10vw;
-    --bubble-float-duration: 7s;
-    --bubble-sway-duration: 6s;
-    --bubble-float-delay: 3s;
-    --bubble-sway-delay: 2s;
-    --bubble-sway-type: sway-right-to-left; }
-  .bubble:nth-child(40) {
-    --bubble-left-offset: 25vw;
-    --bubble-radius: 3vw;
-    --bubble-float-duration: 8s;
-    --bubble-sway-duration: 4s;
-    --bubble-float-delay: 1s;
-    --bubble-sway-delay: 3s;
-    --bubble-sway-type: sway-left-to-right; }
-  .bubble:nth-child(41) {
-    --bubble-left-offset: 87vw;
-    --bubble-radius: 5vw;
-    --bubble-float-duration: 12s;
-    --bubble-sway-duration: 5s;
-    --bubble-float-delay: 3s;
-    --bubble-sway-delay: 2s;
-    --bubble-sway-type: sway-right-to-left; }
-  .bubble:nth-child(42) {
-    --bubble-left-offset: 54vw;
-    --bubble-radius: 3vw;
-    --bubble-float-duration: 6s;
-    --bubble-sway-duration: 6s;
-    --bubble-float-delay: 0s;
-    --bubble-sway-delay: 2s;
-    --bubble-sway-type: sway-right-to-left; }
-  .bubble:nth-child(43) {
-    --bubble-left-offset: 34vw;
-    --bubble-radius: 6vw;
-    --bubble-float-duration: 11s;
-    --bubble-sway-duration: 6s;
-    --bubble-float-delay: 2s;
-    --bubble-sway-delay: 1s;
-    --bubble-sway-type: sway-right-to-left; }
-  .bubble:nth-child(44) {
-    --bubble-left-offset: 91vw;
-    --bubble-radius: 2vw;
-    --bubble-float-duration: 8s;
-    --bubble-sway-duration: 6s;
-    --bubble-float-delay: 1s;
-    --bubble-sway-delay: 0s;
-    --bubble-sway-type: sway-right-to-left; }
-  .bubble:nth-child(45) {
-    --bubble-left-offset: 10vw;
-    --bubble-radius: 8vw;
-    --bubble-float-duration: 10s;
-    --bubble-sway-duration: 5s;
-    --bubble-float-delay: 2s;
-    --bubble-sway-delay: 3s;
-    --bubble-sway-type: sway-right-to-left; }
-  .bubble:nth-child(46) {
-    --bubble-left-offset: 51vw;
-    --bubble-radius: 1vw;
-    --bubble-float-duration: 12s;
-    --bubble-sway-duration: 5s;
-    --bubble-float-delay: 4s;
-    --bubble-sway-delay: 3s;
-    --bubble-sway-type: sway-right-to-left; }
-  .bubble:nth-child(47) {
-    --bubble-left-offset: 2vw;
-    --bubble-radius: 4vw;
-    --bubble-float-duration: 7s;
-    --bubble-sway-duration: 4s;
-    --bubble-float-delay: 1s;
-    --bubble-sway-delay: 1s;
-    --bubble-sway-type: sway-left-to-right; }
-  .bubble:nth-child(48) {
-    --bubble-left-offset: 50vw;
-    --bubble-radius: 8vw;
-    --bubble-float-duration: 12s;
-    --bubble-sway-duration: 6s;
-    --bubble-float-delay: 0s;
-    --bubble-sway-delay: 0s;
-    --bubble-sway-type: sway-left-to-right; }
-  .bubble:nth-child(49) {
-    --bubble-left-offset: 41vw;
-    --bubble-radius: 10vw;
-    --bubble-float-duration: 10s;
-    --bubble-sway-duration: 6s;
-    --bubble-float-delay: 1s;
-    --bubble-sway-delay: 4s;
-    --bubble-sway-type: sway-right-to-left; }
-  .bubble:nth-child(50) {
-    --bubble-left-offset: 63vw;
-    --bubble-radius: 6vw;
-    --bubble-float-duration: 9s;
-    --bubble-sway-duration: 5s;
-    --bubble-float-delay: 2s;
-    --bubble-sway-delay: 1s;
-    --bubble-sway-type: sway-right-to-left; }
-
-@keyframes float-up {
-  to {
-    transform: translateY(-175vh); } }
-@keyframes sway-left-to-right {
-  from {
-    transform: translateX(-100%); }
-  to {
-    transform: translateX(100%); } }
-@keyframes sway-right-to-left {
-  from {
-    transform: translateX(100%); }
-  to {
-    transform: translateX(-100%); } }
+/* ***** Responsive Design *****  */
 @media screen and (max-width: 992px) {
   .aboutMe {
     display: block; }
