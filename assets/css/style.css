@@ -85,7 +85,7 @@ body {
     transition: all 1s;
     margin-bottom: 20px; }
   .mySkills .card:hover {
-    transform: scale(1.1);
+    transform: scale(0.9);
     box-shadow: -6px 6px 10px 0px #39bb66; }
 
 /* ***** Resume ***** */
